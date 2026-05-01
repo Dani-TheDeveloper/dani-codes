@@ -15,7 +15,7 @@ def login(form: LoginRequest, db: Session = Depends(get_db)):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
     if not user.is_active:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Account disabled")
-    token = create_access_token(data={"sub": user.id, "role": user.role.value})
+    token = create_access_token(data={"sub": str(user.id), "role": user.role.value})
     return {"access_token": token, "token_type": "bearer"}
 
 
