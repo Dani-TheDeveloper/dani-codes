@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1d4ed8;
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-danger: #dc2626;
+  }
+
+  body {
+    background-color: #f9fafb;
+    color: #111827;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  &:focus { outline: none; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+@utility btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: #2563eb;
+  color: white;
+  &:hover { background-color: #1d4ed8; }
+  &:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+@utility btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: #f3f4f6;
+  color: #374151;
+  &:hover { background-color: #e5e7eb; }
+  &:focus { outline: 2px solid #6b7280; outline-offset: 2px; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+@utility btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: #dc2626;
+  color: white;
+  &:hover { background-color: #b91c1c; }
+  &:focus { outline: 2px solid #ef4444; outline-offset: 2px; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+@utility btn-success {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: #16a34a;
+  color: white;
+  &:hover { background-color: #15803d; }
+  &:focus { outline: 2px solid #22c55e; outline-offset: 2px; }
+  &:disabled { opacity: 0.5; cursor: not-allowed; }
+}
+
+@utility card {
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+@utility input {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: #111827;
+  transition: border-color 0.2s;
+  &::placeholder { color: #9ca3af; }
+  &:focus { border-color: #3b82f6; outline: none; box-shadow: 0 0 0 2px rgb(59 130 246 / 0.2); }
+}
+
+@utility label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+@utility badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+@utility badge-green {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+@utility badge-red {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+@utility badge-yellow {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+@utility badge-blue {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+@utility badge-gray {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+@utility badge-purple {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  padding: 0.125rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
